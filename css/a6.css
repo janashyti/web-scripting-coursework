@@ -1,0 +1,219 @@
+main{
+    background-color:#020B22;
+    font-size:xx-large;
+}
+
+footer{
+    background-color:#020B22 ;
+}
+
+h1{
+    color:lightgrey;
+}
+
+.j1{
+    position: relative;
+    display: inline-block;
+    left: 400px;
+    top: 150px;
+    
+}
+
+.j2{
+    position: relative;
+    left: 507px;
+    top: 150px;
+}
+
+.j3{
+    display: inline-block;
+    position: relative;
+    top: 106px;
+    left: 410px;
+}
+
+.j4{
+    position: absolute;
+    top: 505px;
+    left: 431px;
+    transform: rotate(0.16turn);
+}
+
+
+.s1{
+    display: inline-block;
+    position: relative;
+    top: -235px;
+    left: 600px;
+}
+
+
+.s2{
+    display: inline-block;
+    position: relative;
+    top: -185px;
+    left: 600px;
+}
+
+.s3{
+    display: inline-block;
+    position: relative;
+    top: -140px;
+    left: 600px;
+}
+
+.s4{
+    position: absolute;
+    top: 393px;
+    left: 648px;
+}
+
+.s5{
+    position: absolute;
+    top: 489px;
+    left: 754px;
+}
+
+.star1{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+}
+.star2{
+    position: fixed;
+    top: 200px;
+    left: 200px;
+}
+
+.star3{
+    position: fixed;
+    top: 330px;
+    left: 250px;
+}
+
+.star4{
+    position: fixed;
+    top: 400px;
+    left: 360px;
+}
+
+.star5{
+    position: fixed;
+    top: 500px;
+    left: 230px;
+}
+
+.star6{
+    position: fixed;
+    top: 100px;
+    left: 860px;
+}
+.star7{
+    position: fixed;
+    top: 200px;
+    left: 1000px;
+}
+
+.star8{
+    position: fixed;
+    top: 330px;
+    left: 1100px;
+}
+
+.star9{
+    position: fixed;
+    top: 400px;
+    left: 1060px;
+}
+
+.star10{
+    position: fixed;
+    top: 500px;
+    left: 900px;
+}
+
+.sh1{
+    position:static;
+    top: 90px;
+}
+
+.sh2{
+    position: fixed;
+    top: 100px;
+    left: 600px;
+}
+
+.sh3{
+    position: fixed;
+    top: 440px;
+    left: 500px;
+}
+
+.sh4{
+    position: fixed;
+    top: 250px;
+    left: 850px;
+}
+
+.sh5{
+    position: fixed;
+    top: 100px;
+    left: 800px;
+}
+
+.sh6{
+    position: fixed;
+    top: 150px;
+    left: 80px;
+}
+
+.sh7{
+    position: fixed;
+    top: 270px;
+    left: 170px;
+}
+
+.sh8{
+    position: fixed;
+    top: 530px;
+    left: 770px;
+}
+
+.gs1{
+    position: fixed;
+    top: 100px;
+    left: 360px;
+}
+
+.gs2{
+    position: fixed;
+    top: 450px;
+    left: 80px;
+}
+
+.gs3{
+    position: fixed;
+    top: 80px;
+    left: 990px;
+}
+
+.gs4{
+    position: fixed;
+    top: 480px;
+    left: 1030px;
+}
+.shootingstars{
+    font-size: medium;
+}
+
+.glowingstars{
+    font-size:medium;
+}
+
+.stars{
+    font-size:medium;
+}
+
+.stars2{
+    font-size:medium;
+}

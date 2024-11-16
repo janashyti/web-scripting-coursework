@@ -1,0 +1,93 @@
+p{
+    font-family:Tahoma;
+    font-size: 19;
+    color: yellowgreen;
+}
+
+#pdescription{
+    font-weight: 200;
+    background-origin: padding-box;
+    background-color:darkorange;
+}
+
+.text{
+    text-decoration: wavy;
+    text-align: right;
+    font-weight: bold;
+}
+
+main{
+    background-color: brown;
+    width: 200px;
+}
+
+
+
+h1{
+    background-color: yellow;
+    border: 3px dashed black;
+}
+
+#loremipsum:hover {
+    font-style: oblique;
+}
+
+p::first-letter {
+    text-transform: capitalize;
+    font-size: 200%;
+    font-style: italic;
+}
+
+p::before {
+    content: "Ugly...";
+    font-size: 31px;
+    color:blueviolet
+}
+
+div > img {
+    opacity: 0.8;
+    width: 131%;
+    height: 150px;
+}
+
+#horse-box {
+    background-color:palevioletred;
+    margin: 50px;
+    padding: 40px;
+    border-width: 13px;
+    border-style:groove;
+    border-color:blue;
+    border-radius: 20px;
+}
+
+#horse-box::after {
+    content: "this was a very cute image.. once upon a time";
+    font-weight: bold;
+    font-style: oblique;
+    color:khaki;
+}
+
+h3{
+    color:silver;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+#links{
+    font-feature-settings: "aalt";
+    color:lawngreen;
+}
+
+#haiku{
+    border: 12px;
+    border-style: dashed;
+    border-color: navy;
+    border-width: 13px;
+}
+
+.footer{
+    background-color:greenyellow;
+    border: 60 px;
+    border-style: dashed;
+    border-color: yellow;
+}
