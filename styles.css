@@ -1,0 +1,192 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stylish Banner */
+.banner {
+    background: linear-gradient(135deg, #6a1b9a, #ff4081); /* Gradient with vibrant colors */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.banner h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease-out;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    opacity: 0.8;
+    animation: fadeIn 1s 0.5s ease-out;
+}
+
+/* Keyframe for smooth fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content */
+main {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* List of assignments */
+.assignments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.assignments-list li {
+    width: 100%;
+    max-width: 320px;  /* Limit button width */
+    display: flex;
+    justify-content: center;
+}
+
+/* Stylish buttons for the links */
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #ff4081, #6a1b9a);  /* Gradient background */
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1; /* Ensure text stays above background overlay */
+}
+
+/* Create a background overlay effect */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* No overlay initially */
+    transition: all 0.4s ease;
+    z-index: -1; /* Keep behind the text */
+}
+
+/* Hover effects - darken background */
+.btn:hover::before {
+    background-color: rgba(0, 0, 0, 0.3); /* Darken the background when hovered */
+}
+
+/* Hover effects - purple text */
+.btn:hover {
+    color: #c992ec; /* Text color becomes purple */
+    box-shadow: 0 0 20px rgba(191, 133, 227, 0.7); /* Glowing purple border */
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+/* Focus effect for accessibility */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(155, 77, 202, 0.7); /* Purple focus outline */
+}
+
+/* Footer section (optional) */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #222;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .banner p {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .assignments-list {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}
