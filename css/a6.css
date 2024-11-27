@@ -217,3 +217,9 @@ h1{
 .stars2{
     font-size:medium;
 }
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #081339, #0d0d13);
+}
+

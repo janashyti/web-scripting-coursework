@@ -1,48 +1,54 @@
 .box1{
-height: 100px;
-width: 100px;
+height: 200px;
+width: 210px;
 background-color: aquamarine;
 color:navy;
 font-weight: bold;
 margin: 8px;
+border-radius: 50px;
+background-image: url(https://media.tenor.com/KT2AHSwB2z4AAAAj/sammy-rabbit.gif)
 }
 
 .box2{
-height: 100px;
-width: 100px; 
+height: 200px;
+width: 210px; 
 background-color:darkkhaki;
 color: darkgreen;
 font-weight: bold;
 margin: 8px;
+border-radius: 50px;
+background-image: url(https://media.tenor.com/Bv7UWPSOXV8AAAAM/penguin-thanksgiving.gif)
 }
 
 .box3{
-height: 100px;
-width: 100px; 
+height: 200px;
+width: 210px; 
 background-color:darksalmon;
 color: black;  
 font-weight: bold;
 margin: 8px;
+border-radius: 50px;
+background-image: url(https://media1.tenor.com/m/_RwIi4Tkl48AAAAd/christmas-tree-presents.gif)
 }
 
 .box4{
-height: 100px;
-width: 100px; 
+height: 200px;
+width: 210px; 
 background-color: lightblue;
 color: blue;
 font-weight: bold;
 margin: 8px;
+border-radius: 50px;
+background-image: url(https://media.tenor.com/A_2uBfd4se4AAAAi/winnie-the-pooh-pooh-bear.gif)
 }
 
 .box5{
-    height: 100px;
-    width: 100px; 
-    background-color: crimson;
-    color: blue;
+    height: 200px;
+    width: 210px; 
     font-weight: bold;
     border-radius: 50px;
     text-align: center;
-    background-image: url(https://thumbs.gfycat.com/ShallowMadeupGerbil-max-1mb.gif);
+    background-image: url(https://media.tenor.com/qd4n8EVQsj4AAAAM/christmas-xmas.gif);
     }
 
 .btn{
@@ -56,3 +62,17 @@ main{
     margin: 8px;
     text-align: center;
 }
+
+/* Ensure the body takes the full height of the viewport */
+body, html {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertically center content */
+    align-items: center;  /* Horizontally center content */
+    text-align: center;  /* Ensure text is centered */
+}
+
+
+
+

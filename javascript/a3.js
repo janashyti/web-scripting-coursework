@@ -1,108 +1,121 @@
-const sumButton = document.querySelector("#computeSum")
-const subtractionButton = document.querySelector("#computeSubtraction")
-const divisionButton = document.querySelector("#computeDivision")
-const multiplicationButton = document.querySelector("#computeMultiplication")
-const sqrtButton = document.querySelector('#computeSqrt')
-const powerButton = document.querySelector('#computePower')
+// Get references to buttons and input field
+const inputField = document.querySelector("#inputField");
 
+const numberButtons = document.querySelectorAll(".btn");
+const sumButton = document.querySelector("#btnSum");
+const subtractionButton = document.querySelector("#btnSubtract");
+const multiplicationButton = document.querySelector("#btnMultiply");
+const divisionButton = document.querySelector("#btnDivide");
+const sqrtButton = document.querySelector("#btnSqrt");
+const powerButton = document.querySelector("#btnPower");
+const clearButton = document.querySelector("#btnClear");
+const equalsButton = document.querySelector("#btnEquals");
 
-const add = function () {
+let currentInput = ''; 
+let previousInput = ''; 
+let currentOperation = null;
 
-    const input1 = document.querySelector("#input1")
-    const value1 = input1.value
-
-    const input2 = document.querySelector("#input2")
-    const value2 = input2.value
-
-    let sum = value1 + value2
-    sum = parseInt(value1) + parseInt(value2)
-    sum = Number(value1) + Number(value2)
-    sum = +value1 + +value2
-
-    const sumInput = document.querySelector("#sum")
-    sumInput.value = sum
-
+// Update the result display
+function updateResult(value) {
+  inputField.value = value;
 }
 
-const subtraction = function () {
+// Handle number button clicks
+numberButtons.forEach(button => {
+  button.addEventListener("click", function () {
+    currentInput += button.innerText;
+    updateResult(currentInput);
+  });
+});
 
-    const input1 = document.querySelector("#input1")
-    const value1 = input1.value
+// Handle clear button
+clearButton.addEventListener("click", function () {
+  currentInput = '';
+  previousInput = '';
+  currentOperation = null;
+  updateResult('0');
+});
 
-    const input2 = document.querySelector("#input2")
-    const value2 = input2.value
+// Handle operations (+, -, *, /, etc.)
+sumButton.addEventListener("click", function () {
+  if (currentInput !== '') {
+    previousInput = currentInput;
+    currentOperation = 'sum';
+    currentInput = ''; 
+  }
+});
 
-    let subtraction = +value1 - +value2
+subtractionButton.addEventListener("click", function () {
+  if (currentInput !== '') {
+    previousInput = currentInput;
+    currentOperation = 'subtract';
+    currentInput = '';
+  }
+});
 
-    const subtractionInput = document.querySelector("#subtraction")
-    subtractionInput.value = subtraction
+multiplicationButton.addEventListener("click", function () {
+  if (currentInput !== '') {
+    previousInput = currentInput;
+    currentOperation = 'multiply';
+    currentInput = '';
+  }
+});
 
-}
+divisionButton.addEventListener("click", function () {
+  if (currentInput !== '') {
+    previousInput = currentInput;
+    currentOperation = 'divide';
+    currentInput = '';
+  }
+});
 
-const multiplication = function () {
+// Handle square root operation
+sqrtButton.addEventListener("click", function () {
+  if (currentInput !== '') {
+    currentInput = Math.sqrt(parseFloat(currentInput)).toString();
+    updateResult(currentInput);
+  }
+});
 
-    const input1 = document.querySelector("#input1")
-    const value1 = input1.value
+// Handle power operation
+powerButton.addEventListener("click", function () {
+  if (currentInput !== '') {
+    previousInput = currentInput;
+    currentOperation = 'power';
+    currentInput = '';
+  }
+});
 
-    const input2 = document.querySelector("#input2")
-    const value2 = input2.value
+// Handle equals button
+equalsButton.addEventListener("click", function () {
+  if (currentInput !== '' && currentOperation !== null) {
+    let result;
+    const num1 = parseFloat(previousInput);
+    const num2 = parseFloat(currentInput);
 
-    let multiplication = Number(value1) * Number(value2)
+    switch (currentOperation) {
+      case 'sum':
+        result = num1 + num2;
+        break;
+      case 'subtract':
+        result = num1 - num2;
+        break;
+      case 'multiply':
+        result = num1 * num2;
+        break;
+      case 'divide':
+        result = num2 !== 0 ? num1 / num2 : 'Error';
+        break;
+      case 'power':
+        result = Math.pow(num1, num2);
+        break;
+      default:
+        result = 'Error';
+    }
 
-    const multiplicationInput = document.querySelector("#multiplication")
-    multiplicationInput.value = multiplication
-
-}
-
-const division = function () {
-
-    const input1 = document.querySelector("#input1")
-    const value1 = input1.value
-
-    const input2 = document.querySelector("#input2")
-    const value2 = input2.value
-
-    let division = Number(value1) / Number(value2)
-
-    const divisionInput = document.querySelector("#division")
-    divisionInput.value = division
-
-}
-
-const power = function () {
-
-    const input1 = document.querySelector("#input1")
-    const value1 = input1.value
-
-    const input2 = document.querySelector("#input2")
-    const value2 = input2.value
-
-    let power = Math.pow(value1, value2)
-    power = Math.pow(Number(value1), Number(value2))
-
-    const powerInput = document.querySelector("#power")
-    powerInput.value = power
-
-}
-
-const sqrt = function () {
-
-    const input1 = document.querySelector("#input1")
-    const value1 = input1.value
-
-
-    let sqrt = Math.sqrt(value1)
-    sqrt = Math.sqrt(Number(value1))
-
-    const sqrtInput = document.querySelector("#sqrt")
-    sqrtInput.value = sqrt
-
-}
-
-sumButton.addEventListener("click", add)
-subtractionButton.addEventListener("click", subtraction)
-multiplicationButton.addEventListener("click", multiplication)
-divisionButton.addEventListener("click", division)
-powerButton.addEventListener("click", power)
-sqrtButton.addEventListener("click", sqrt)
-
+    updateResult(result);
+    currentInput = result.toString();
+    previousInput = '';
+    currentOperation = null;
+  }
+});

@@ -1,4 +1,6 @@
-main{
-    background-color: black;
+body{
+    background-color: aliceblue;
     display: inline-block;
+    text-align: center;
+    align-items: center;
 }

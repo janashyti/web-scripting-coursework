@@ -3,17 +3,17 @@ let mainElement = document.querySelector("main")
 let newDiv1 = document.createElement("div")
 mainElement.appendChild(newDiv1)
 newDiv1.className = "box1";
-newDiv1.textContent = "demi logel"
+
 
 let newDiv2 = document.createElement("div")
 mainElement.appendChild(newDiv2)
 newDiv2.className = "box2";
-newDiv2.textContent="ha shume buke";
+
 
 let newDiv3 = document.createElement("div")
 mainElement.appendChild(newDiv3)
 newDiv3.className = "box3";
-newDiv3.textContent = "dhe nuk ka, fare turp"
+
 
 let sectionElement = document.querySelector("section")
 
@@ -53,7 +53,6 @@ function appendBoxHandler() {
     let newDiv = document.createElement("div")
     mainElement.appendChild(newDiv)
     newDiv.className = "box4"
-    newDiv.textContent = "new box"
 }
 
 let appendBoxBtn = document.querySelector("#appendBoxBtn")
@@ -85,7 +84,6 @@ function modifyBoxHandler() {
     }
     else{
         firstElement.className = "box1"
-        console.log("Oni")
     }  
 }
 
@@ -98,11 +96,9 @@ function mysteryBoxHandler(){
     let newDiv = document.createElement("div")
     mainElement.prepend(newDiv)
     newDiv.className = "box5"
-    newDiv.textContent = "Surprize!"
     let newDiv2 = document.createElement("div")
     mainElement.appendChild(newDiv2)
     newDiv2.className = "box5"
-    newDiv2.textContent = "Double Surprize"
 }
 
 let mysteryBoxBtn = document.querySelector("#mysteryBoxBtn")
